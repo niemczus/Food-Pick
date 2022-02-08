@@ -1,24 +1,109 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Food_Pick" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="diningImage" translatesAutoresizingMaskIntoConstraints="NO" id="Q8A-Tc-g9m">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                            </imageView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Todays choice is ..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ugy-6o-qK8">
+                                <rect key="frame" x="74" y="94" width="227" height="33"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="27"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="American" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sp7-8F-xMB">
+                                <rect key="frame" x="87.666666666666686" y="137" width="200" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="gob-Oe-JFl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="33"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UYg-2e-xLV">
+                                <rect key="frame" x="77.666666666666686" y="698" width="220" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="0.56904578210000001" blue="0.57461684940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="70" id="7iA-Vb-7Gp"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="220" id="UwB-6o-gX4"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="220" id="aD5-zT-KaO"/>
+                                    <constraint firstAttribute="height" constant="50" id="csy-Cm-OiB"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Press To Choose">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="didTapChooseButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="seV-Rf-2Cd"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="with a hint of ..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yfj-8k-6Tg">
+                                <rect key="frame" x="96" y="207" width="183" height="33"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="27"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mexican" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t9o-lb-nVN">
+                                <rect key="frame" x="87.666666666666686" y="250" width="200" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="eyL-mY-IsN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="33"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Q8A-Tc-g9m" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="1Tg-jk-b8H"/>
+                            <constraint firstItem="Q8A-Tc-g9m" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="6Hm-hC-biC"/>
+                            <constraint firstItem="Yfj-8k-6Tg" firstAttribute="top" secondItem="sp7-8F-xMB" secondAttribute="bottom" constant="30" id="6Uv-gd-W48"/>
+                            <constraint firstAttribute="bottom" secondItem="Q8A-Tc-g9m" secondAttribute="bottom" id="9VS-vN-si0"/>
+                            <constraint firstItem="UYg-2e-xLV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BGU-Ei-1RT"/>
+                            <constraint firstItem="Q8A-Tc-g9m" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ET0-Mw-uJp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="UYg-2e-xLV" secondAttribute="bottom" constant="30" id="FyB-AI-GYs"/>
+                            <constraint firstItem="sp7-8F-xMB" firstAttribute="top" secondItem="Ugy-6o-qK8" secondAttribute="bottom" constant="10" id="GeQ-wE-hOb"/>
+                            <constraint firstItem="Yfj-8k-6Tg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="V84-w8-heY"/>
+                            <constraint firstItem="t9o-lb-nVN" firstAttribute="top" secondItem="Yfj-8k-6Tg" secondAttribute="bottom" constant="10" id="XkW-0g-JeW"/>
+                            <constraint firstItem="sp7-8F-xMB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="k22-1L-QwY"/>
+                            <constraint firstItem="Ugy-6o-qK8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="ndU-op-4IT"/>
+                            <constraint firstItem="Ugy-6o-qK8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="y6g-Ja-QEc"/>
+                            <constraint firstItem="t9o-lb-nVN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ynu-T0-3Oh"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="chooseButton" destination="UYg-2e-xLV" id="lIa-Ku-AdA"/>
+                        <outlet property="foodTypeLabel" destination="sp7-8F-xMB" id="VWA-2H-mWt"/>
+                        <outlet property="hintTypeLabel" destination="t9o-lb-nVN" id="TI1-bT-S5K"/>
+                        <outlet property="todaysChoiceLabel" destination="Ugy-6o-qK8" id="hDA-Y5-MOJ"/>
+                        <outlet property="withHintLabel" destination="Yfj-8k-6Tg" id="IM9-FO-etf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-23.199999999999999" y="62.807881773399018"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="diningImage" width="1770" height="2129"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
